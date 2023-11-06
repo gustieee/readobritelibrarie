@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Readobrite</title>
+    <link rel="stylesheet" href="style.css"/>
+    <link rel="website icon" type="png" href="logo.png">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@1,500&family=Poppins&family=Ubuntu:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@0,500;1,500&family=Poppins&family=Ubuntu:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inclusive+Sans&family=Montserrat:ital,wght@1,500&family=Ubuntu:wght@500&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            background-color: white;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .fcontainer {
+            z-index: 999;
+            position: fixed; top: 0; right: 0; left: 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: rgb(0, 153, 173);
+            width: 100%;
+            height: 80px;
+            box-shadow: 0px 0px 20px 0px;
+        }
+
+        .wrapper {
+            margin-left: 20px;
+        }
+
+        .judul {
+            display: flex;
+            font-size: 45px;
+            font-family: Inclusive Sans;
+            font-weight: bolds;
+            color: white;
+        }
+
+        .list {
+            margin: 30px 0px 30px 0px;
+            float: right;
+            display: flex;
+            list-style-type: none;
+        }
+
+        .gusti .gustiabe {
+            color: white;
+            text-decoration: none;
+            margin: 20px;
+            font-size: 25px;
+            font-family: poppins;
+        }
+
+        .list :hover {
+            background-color: rgb(0, 207, 207);
+            border-radius: 20px;
+            transition: 1s;
+        }
+
+        .kolom {
+            margin-left: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-family: poppins;
+        }
+
+        .isi {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .kolom button {
+            border-radius: 10px;
+            padding: 15px;
+            border: none;
+        }
+
+        .kolom button a {
+            color: black;
+            font-family: poppins;
+            font-size: 20px;
+            text-decoration: none;
+        }
+
+        .h1daftar {
+            margin-top: 50px;
+            font-size: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: montserrat;
+        }
+
+        footer {
+            bottom: 0;
+        }
+
+        .footer {
+            box-shadow: 20px 0px 0px 0px;
+            background-color: rgba(8, 90, 105, 0.646);
+            box-sizing: border-box;
+            width: 100%;
+            text-align: left;
+            font: bold 16px;
+            padding: 50px 50px 60px 50px;
+            margin-top: 80px;
+        }
+
+        .footer .footer-left,
+        .footer .footer-center,
+        .footer .footer-right {
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        @media (max-height:800px){
+            footer {
+                position: static;
+            }
+            header {
+                padding-top: 40px;
+            }
+        }
+
+        .footer .footer-left {
+            width: 30%;
+        }
+
+        .footer h3 {
+            color: #f5f5f5;
+            font-family: poppins;
+            margin: 0;
+            margin-top: 10px;
+
+        }
+
+        .footer .footer-left img {
+            width: 20%;
+            vertical-align: middle;
+            margin-bottom: 0px;
+        }
+
+        .footer .footer-left .credit-cards {
+            width: 100%;
+        }
+
+        .footer .credit-cards img {
+            margin-top: -60px;
+        }
+        
+        .footer .footer-copyright {
+            color: #fdfeff;
+            font-size: 12px;
+            font-weight: normal;
+            margin: 0;
+            margin: -60px 100px 0px 0px;
+            font-family: poppins;
+        }
+
+        .footer .credit-cards img .bank{
+            margin-left: -100px;
+        }
+
+        .footer .credit-cards .listt{
+            margin-top: -20px; float: right; margin-right: 50px;
+            text-decoration: none;
+            list-style: none;
+            
+
+        }
+        
+        .section-card {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 48px;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .section-card1 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 48px;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .section-card2 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 48px;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .section-card3 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 48px;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .section-card4 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 48px;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .section-card5 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 48px;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .card {
+            background-color: #fff;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .1); 
+            
+        }
+
+        .card-img {
+            width: 100%;
+            display: block;
+        }
+
+        .card-details {
+            padding: 10px 0;
+        }
+
+        .card-details ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+            padding: 20px 0;
+        }
+
+        .card-details ul li {
+            font-family: poppins;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            padding: 12px 0;
+        }
+        
+        .card-details ul li:not(:last-child){
+            border-bottom: 1px solid#bbb;
+        }
+
+        .btn{
+            font-family: poppins;
+            text-decoration: none;
+            text-transform: uppercase;
+            text-align: center;
+            color: #eee;
+            font-weight: 500;
+
+            display: inline-block;
+            padding: 14px 28px;
+            border-radius: 100px;
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 30px;
+        }
+
+        .card-1 .btn {
+            background-color: green;
+        }
+
+        .card-2 .btn {
+            background-color: rgb(0, 0, 87);
+        }
+
+        .card-3 .btn {
+            background-color: rgb(99, 0, 145);
+        }
+
+        .card-4 .btn {
+            background-color: rgb(255, 19, 78);
+        }
+
+        .card-5 .btn {
+            background-color: rgb(0, 145, 85);
+        }
+a
+        .card-6 .btn {
+            background-color: rgb(211, 162, 0);
+        }
+
+        .card-7 .btn {
+            background-color: rgb(197, 52, 52);
+        }
+
+        .card-8 .btn {
+            background-color: rgb(25, 110, 106);
+        }
+
+        .card-9 .btn {
+            background-color: rgb(99, 0, 145);
+        }
+
+        .card-10 .btn {
+            background-color: rgb(255, 89, 23);
+        }
+
+        .card-11 .btn {
+            background-color: rgb(255, 196, 68);
+        }
+
+        .card-12 .btn {
+            background-color: rgb(211, 127, 0);
+        }
+
+        .card-13 .btn {
+            background-color: rgb(223, 26, 0);
+        }
+
+        .card-14 .btn {
+            background-color: rgb(255, 235, 58);
+        }
+
+        .card-15 .btn {
+            background-color: rgb(0, 0, 0);
+        }
+        .card{
+            transition: 0.3s ease;
+        }
+        .card:hover{
+            transform: scale(1.05);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, .2); 
+        }
+
+        .section-box1 {
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            column-gap: 48px;
+            width: 80%;
+            margin: 60px auto;
+        }
+
+        .ruokganteng {
+            padding: 10px 0;
+        }
+
+        .ruokganteng ul {
+            list-style-type: none;
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 80%;
+            padding: 20px 0;
+        }
+
+        .ruokganteng ul li {
+            font-family: poppins;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            margin: 20px 0;
+        }
+
+
+
+        .ruokganteng ul li:not(:first-child){
+            margin: 0px 0;
+        }
+
+        .sub-judul {
+            font-weight: bold;
+            color: rgb(0, 162, 255);
+        }
+
+        .image-card {
+            transition: 1s;
+        }
+
+        .image-card:hover {
+            transform: rotate(360deg);
+        }
+
+        .icons-rotate {
+            transition: 1s;
+        }
+
+        .icons-rotate:hover {
+            transform: rotate(360deg);
+        }
+
+        p {
+            text-align: center;
+            font-size: 15px;
+            margin-top: 10px;
+            font-family: poppins;
+        }
+
+        .bottom {
+            border-bottom: 1px solid#bbb;
+            margin: 20px 0px 0px 120px;
+            width: 80%;
+        }
+
+        .callender {
+            width: 20%;
+            height: 20%;
+
+        }
+
+        .testimoni {
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            margin-right: 140px;
+        }
+    </style>
+</head>
+<body>
+    <div class="fcontainer">    
+        <div class="wrapper">
+            <div class="judul">Readobrite</div>
+        </div>
+        <ul class="list">
+            <li class="gusti"><a href="#home" class="gustiabe">Home</a></li>
+            <li class="gusti"><a href="#layanan" class="gustiabe">Layanan</a></li>
+            <li class="gusti"><a href="#daftar" class="gustiabe">Daftar Buku</a></li>
+            <li class="gusti"><a href="#Testimoni" class="gustiabe">Testimoni</a></li>
+            <li class="gusti"><a href="#services" class="gustiabe">Contact</a></li>
+            <li class="gusti"><a href="login.html" class="gustiabe">Login</a></li>
+        </ul>
+    </div>
+
+    <div class="">
+        <section id="home">
+            <img src="1695685173161.jpg" width="100%" height="700px" alt="">
+        </section>
+    </div>
+
+    <div id="layanan">
+        <br><br>
+        <h1 class="h1daftar">Layanan :</h1>
+        <p>Tingkatkan pengalaman Anda dengan fitur layanan kami yang unggul, yang dirancang untuk memberikan kenyamanan dan kepuasan tertinggi kepada Anda.</p>
+        <div class="bottom"></div>
+        <div class="section-box1">
+            <div class="ruokganteng">
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="lapto-removebg-preview.png" alt="" class="image-card" width="15%" height="15%" style="margin-top: 20px; background-color: rgb(91, 222, 255); border-radius: 50px;">
+                    <ul>
+                        <li class="sub-judul">Koleksi-Koleksi Buku</li>
+                        <li>Readobrite menyediakan banyak skali buku yg dapat di pilih oleh buyer,dari buku pendidikan,novel,bahkan sampai yg religius</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ruokganteng">
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="keranjang-removebg-preview.png" alt="" class="image-card"  width="15%" height="15%" style="margin-top: 20px; background-color: rgb(91, 222, 255); border-radius: 50px;">
+                    <ul>
+                        <li class="sub-judul">Transaksi Pembelian Buku</li>
+                        <li>Temukan berbagai pilihan barang berkualitas tinggi, dan nikmati pengalaman belanja yang praktis dan aman dengan harga yang kompetitif. </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="ruokganteng">
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="pinjaman-removebg-preview.png" alt="" class="image-card"  width="15%" height="15%" style="margin-top: 20px; background-color: rgb(91, 222, 255); border-radius: 50px;">
+                    <ul>
+                        <li class="sub-judul">Peminjaman Buku</li>
+                        <li>Nikmati beragam pilihan produk yang dapat Anda pinjam,dengan kemudahan dan kenyamanan. Hemat uang dan ruang penyimpanan Anda.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="daftar"></div>
+    <br><br>
+    <h1 class="h1daftar">Daftar Buku :</h1>
+    <div class="bottom"></div>
+    <div class="section-card">
+        <div class="card card-1">
+            <img src="bumi.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Bumi</li>
+                    <li>Sinopsis : Novel ini mengisahkan tentang petualangan 3 remaja yang berusia 15 tahun bernama Raib, Ali dan Seli. Namun mereka bukanlah remaja biasa, melainkan remaja yang memiliki kekuatan khusus seperti Raib yang bisa menghilang, Seli yang bisa mengeluarkan petir dan Ali seorang pelajar yang sangat jenius</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-2">
+            <img src="bulan.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Bulan</li>
+                    <li>Sinopsis : Av ingin menemui ketua konsil Klan Matahari untuk mencari Federasi saat melawan Tamus. Konsil Klan Matahari ingin menguasai Klan Matahari.Mereka pergi dengan bantuan dari Buku Kehidupan milik Raib. Akhirnya, dengan kelebihan dan kemampuan masing-masing, mereka memutuskan pergi ke Klan Matahari</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-3">
+            <img src="bintang.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Bintang</li>
+                    <li>Sinopsis : Namaku Raib, aku bisa menghilang. Seli, teman semejaku, bisa mengeluarkan petir dari telapak tangannya. Dan Ali, si biang kerok sekaligus si genius, bisa berubah menjadi beruang raksasa. Kami bertiga kemudian bertualang ke dunia paralel yang tidak diketahui banyak orang</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-card1">
+        <div class="card card-4">
+            <img src="komet minor.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Komet Minor</li>
+                    <li>Sinopsis : Pertarungan untuk melawan si Tanpa Mahkota akan berakhir di sini. Siapa pun yang menang, semua berakhir di cerita ini, di Klan Komet Minor, tempat dimana aliansi Para Pemburu yang pernah dibentuk, serta pusaka terhebat pernah diciptakan.</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-5">
+            <img src="selena.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Selena</li>
+                    <li>Sinopsis : Selepas ibunda Selena wafat, Selena hidup bersama paman dan bibinya. Disana ia bekerja di perusahaan pamannya di bidang konstruksi bangunan. Selena tidak pernah mengeluh, meski ia menjadi satu-satunya perempuan di proyek</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-6">
+            <img src="bibi gil.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Bibi Gill</li>
+                    <li>Sinopsis : Gill adalah sapaan akrab dari keluarganya serta penduduk di Distrik Malam dan Misterinya. Dia merupakan satu-satunya anak perempuan yang paling kecil dari tujuh bersaudara. Dia seperti anak-anak pada umumnya, masih suka bermain dan bercanda. Namun yang membedakan dari rekan-rekannya, Gill memiliki kode genetik langka layaknya pemilik keturunan murni</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section-card2">
+        <div class="card card-7">
+            <img src="matahari minor.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Matahari Minor</li>
+                    <li>Sinopsis : Novel ini menceritakan Seli dan Raib setelah kejadian di SagaraS, dimana Ali tidak mengikuti mereka lagi.</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-8">
+            <img src="pulang.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Pulang</li>
+                    <li>Sinopsis : Kisah ini bermula ketika Bujang, seorang anak berusia 15 tahun yang memiliki kemampuan hebat dalam berburu babi hutan dapat membuat Teuke Muda terkesan dan akhirnya membawanya ke Kota untuk diasuh seperti layaknya anak angkat</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-9">
+            <img src="ceros.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Ceros & Batozar</li>
+                    <li>Sinopsis : Awalnya mereka hanya mengikuti karyawisata di salah satu situs bangunan kuno. Hingga Ali dengan kegeniusan dan rasa penasarannya, Karena sensor miliknya menunjukan skala 10. ILY versi 5 mendekteksi bahwa ada situs kuno yang sama di bawah tanah. ILY menemukan pintu masuk dengan lorong kuno. Ali langsung memeriksanya, mengambil alih kemudi dan mematikan mode suara ILY karena ILY dianggap cerewat dan terlalu mengkhawatirkan bahaya yang akan menimpa.</li>
+                    <li>Pengarang : TERE LIYE</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-card3">
+        <div class="card card-10">
+            <img src="9786237845430-Akuntansi_Pengantar_1.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Akuntansi Pengantar 1</li>
+                    <li>Penerbit : Gava Media</li>
+                    <li>Tahun Terbit : 2009</li>
+                    <li>Pengarang : Supardi</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-11">
+            <img src="alquran.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Pengantar Studi Al-Quran : Teori dan Pendekatan</li>
+                    <li>Penerbit : LKiS</li>
+                    <li>Tahun Terbit : 2012</li>
+                    <li>Pengarang : Munzir Hitami</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-12">
+            <img src="politik.jpeg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Politik Media dan Pertarungan Wacana</li>
+                    <li>Penerbit : LKiS</li>
+                    <li>Tahun Terbit : 2013</li>
+                    <li>Pengarang : Agus Sudibyo</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="section-card4">
+        <div class="card card-13">
+            <img src="sejarahpendidikan.jpeg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Sejarah Pendidikan Nasional : Dari masa klasik hingga modern</li>
+                    <li>Penerbit : Ar-Ruzz Media</li>
+                    <li>Tahun Terbit : 2016</li>
+                    <li>Pengarang : Muhammad Rifa'i</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-14">
+            <img src="programing.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Tutorial Pemrograman Mobile (J2ME)</li>
+                    <li>Penerbit : Gava Media</li>
+                    <li>Tahun Terbit : 2009</li>
+                    <li>Pengarang : Azhari</li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+        <div class="card card-15">
+            <img src="malio.jpg" alt="" class="card-img">
+            <div class="card-details">
+                <ul>
+                    <li>Judul : Malioboro at Midnight</li>
+                    <li>Penerbit : Bukune</li>
+                    <li>Tengah malam bagi kebanyakan orang adalah waktu terbaik untuk beristirahat dan tidur lelap. Tapi untuk Serana Nighita, itu adalah waktu untuk menangisi hidup dan meratapi hubungannya dengan sang penyanyi terkenal, Jan Ichard. Popularitas membawa lelaki itu jauh darinya, Ichard di Jakarta, meninggalkan Sera di Jogja.Bagi Sera, tengah malam selalu menakutkan.Namun, semua berubah setelah Malioboro Hartigan tidak sengaja mendobrak pintu kamarnya pada sebuah malam. Malio datang dan menawarkan pertemanan agar Sera tidak sendiri, agar Sera bisa berbagi sedihnya.Lantas bagaimana dengan hubungan Sera dan Jan Ichard yang semakin rumit? Dan benarkah tanpa sadar, Malio sudah menjadi 'Midnight' terbaik Sera?</li>
+                    <li>Tanggal Terbit : 31 maret 2023  </li>
+                    <li>Harga : 59k</li>
+                </ul>
+                <a href="formbeeli.html" class="btn">Beli</a>
+                <a href="pinjam.html" class="btn">Pinjam</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="Testimoni">
+        <br><br>
+        <h1 class="h1daftar">Testimoni :</h1>
+        <p>Apa yang mereka katakan tentang Website kami :</p>
+        <div class="bottom"></div>
+        <div class="section-box1">
+            <div class="ruokganteng">
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="" alt="" class="">
+                    <ul>
+                        <a href="https://www.instagram.com/p/CzTIu9EI9aEn3H-JFxCvyTyUYrRidW31Rcxq5A0/"><img src="ruok.png" alt="" width="270px" height="150px" style="border-radius: 10px;"></a>
+                        <li class="sub-judul" style="margin-top: 20px; margin-bottom: 20px;">Rakha Alfaqih aka RUOK</li>
+                        <div class="testimoni">
+                            <img src="callender-removebg-preview.png" alt="" class="callender">
+                            <li class="last-child">30-10-2023</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="ruokganteng">
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="" alt="" class="">
+                    <ul>
+                        <a href="https://www.instagram.com/p/CzTIlnHIY_ugDDSlOXt8EVsNK15IAcI5rOCnUc0/"><img src="kuch.png" alt="" width="270px" height="150px" style="border-radius: 10px;"></a>
+                        <li class="sub-judul" style="margin-bottom: 20px; margin-top: 20px;">SLESAII TU MADRIDD!!!</li>
+                        <div class="testimoni">
+                            <img src="callender-removebg-preview.png" alt="" class="callender">
+                            <li class="last-child">03-11-2023</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+            <div class="ruokganteng">
+                <div class="card" style="display: flex; flex-direction: column; align-items: center;">
+                    <img src="" alt="" class="">
+                    <ul>
+                        <a href="https://www.instagram.com/p/CzTIUlYog5xge5QscmZWNuqFQPU803pBDLd_tM0/"><img src="degem.png" alt="" width="270px" height="150px" style="border-radius: 10px;"></a>
+                        <li class="sub-judul" style="margin-bottom: 20px; margin-top: 20px;">Dede gemesss</li>
+                        <div class="testimoni">
+                            <img src="callender-removebg-preview.png" alt="" class="callender">
+                            <li class="last-child">28-10-2023</li>
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <section id="services">
+        <footer>
+            <div class="footer">
+                <h3>Payment Method</h3>
+                <h3 style="margin-left: 607px; margin-top: -30px;">Contact us</h3>
+                <div class="credit-cards">
+                    <img src="qris_putih.png" style="width: 200px; margin-bottom: 65px;">
+                    <img  src="e60c7fb17ef375a76f66b48680c14352-removebg-preview.png" alt="" class="bank" width="400px" height="210px" style="margin-left: -75px; margin-top: -60px;">
+                    <a href="https://wa.me/6285891388433"><img src="whatsapp.png" alt="" class="icons-rotate" style="width: 30px; margin-bottom: 117px; margin-left: 70px;" ></a>
+                    <a href="https://www.instagram.com/gstirmdhan_12/"><img src="instagram-transparent-image-5-removebg-preview.png" alt="" class="icons-rotate"  style="width: 40px; margin-bottom: 113px; ;"></a>
+                    <a href="https://www.facebook.com/profile.php?id=100079607179834&mibextid=ZbWKwL"><img src="1200x630wa-removebg-preview.png" alt="" class="icons-rotate"  style="width: 77px; margin-bottom: 113px; margin-left: -22px;"></a>
+                    <a href="term.html#term"  ><h3 style="margin-top: -30px; float: right; margin-right: 150px;">Terms Of services</h3></a>
+                    <div class="listt">
+                        <ul style="list-style: none; margin-top: 20px;">
+                            <a href="term.html#ketentuan" style="text-decoration: none;"><li style="color: white;">Ketentuan</li></a>
+                            <a href="term.html#Keamanan" style="text-decoration: none;"><li style="color:  white;">Keamanan Website</li></a>
+                            <a href="term.html#konten" style="text-decoration: none;"><li style="color: white;">Konten Dan Aktivitas</li></a>
+                            <a href="term.html#anti-spam" style="text-decoration: none;"><li style="color:  white;">Zero Tolerance Anti-Spam Policy</li></a>
+                            <a href="term.html#salah" style="text-decoration: none;"><li style="color: white;">Penyalahgunaan Sumberdaya Sistem</li></a>
+                            <a href="term.html#suspen" style="text-decoration: none;"><li style="color:  white;">Suspensi</li></a>
+                        </ul>
+                    </div>
+                </div>
+                <p class="footer-copyright">@2023 Reobrite Library</p>
+            </div>
+        </footer>
+    </section>
+</body>
+</html>
